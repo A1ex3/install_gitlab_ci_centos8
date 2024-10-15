@@ -2,6 +2,8 @@
 
 ./centos-stream-8-vault-repos.sh
 
+sudo yum update -y
+
 if ! command -v docker &> /dev/null; then
     sudo yum install -y yum-utils
     sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -30,4 +32,4 @@ if ! command -v gitlab-runner &> /dev/null; then
     fi
 fi
 
-echo "Installation completed successfully"
+echo "Installation completed successfully!"
