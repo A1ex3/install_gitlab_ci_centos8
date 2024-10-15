@@ -21,7 +21,7 @@ if ! command -v docker &> /dev/null; then
 fi
 
 if ! command -v gitlab-runner &> /dev/null; then
-    sudo curl -L --output /etc/yum.repos.d/gitlab-runner.repo https://packages.gitlab.com/runner/gitlab-runner/el/8/gitlab-runner.repo
+    curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh" | sudo bash
     sudo yum install gitlab-runner -y
 
     if ! command -v gitlab-runner &> /dev/null; then
