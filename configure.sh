@@ -29,3 +29,5 @@ if ! command -v gitlab-runner &> /dev/null; then
         gitlab-runner --version
     fi
 fi
+
+echo "Installation completed successfully"
