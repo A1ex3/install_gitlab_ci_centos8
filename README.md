@@ -1,4 +1,4 @@
-## Install
+## Installing.
 
 ```bash
 sudo ./install.sh
