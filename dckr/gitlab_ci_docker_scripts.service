@@ -1,0 +1,15 @@
+[Unit]
+Description=Script for automatic docker management for gitlab ci
+After=network.target
+
+[Service]
+ExecStart=/gitlab_ci_scripts/venv/bin/python3 /gitlab_ci_scripts/dckr/remove_unused_docker_images.py --config /gitlab_ci_scripts/config.json
+WorkingDirectory=/gitlab_ci_scripts
+User=root
+Restart=always
+RestartSec=10
+StandardOutput=append:/var/log/gitlab_ci_docker_scripts.log
+StandardError=append:/var/log/gitlab_ci_docker_scripts.log
+
+[Install]
+WantedBy=multi-user.target
