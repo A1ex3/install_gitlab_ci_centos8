@@ -16,7 +16,7 @@ function check_dependency () {
 
 check_dependency git || exit 1
 check_dependency python3 || exit 1
-check_dependency pip && pip3 || exit 1
+check_dependency pip3 || exit 1
 
 rm -rf $REPO_NAME
 if ! git clone -b "$REPO_VERSION" https://github.com/A1ex3/"$REPO_NAME.git"; then
