@@ -2,7 +2,7 @@
 
 PWD=$(pwd)
 REPO_NAME="install_gitlab_ci_centos8"
-REPO_VERSION="main"
+REPO_VERSION="v0.0.3"
 WORK_DIR_NAME="/gitlab_ci_scripts"
 
 function check_dependency () {
