@@ -38,7 +38,12 @@ rm -rf "$REPO_NAME"
 
 cd "$WORK_DIR_NAME" || exit 1
 
-if ! pip3 install -r requirements.txt; then
+if ! python3 -m venv venv; then
+    echo "Failed to create venv!"
+    exit 1
+fi
+
+if ! ./venv/bin/pip3 install -r requirements.txt; then
     echo "Failed to install dependencies for Python!"
     exit 1
 fi
