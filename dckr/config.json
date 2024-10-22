@@ -1,0 +1,7 @@
+{
+    "log_level": "INFO",
+    "remove_unused_images":{
+        "per_seconds": 86400,
+        "white_list": []
+    }
+}
