@@ -3,7 +3,7 @@ Description=Script for automatic docker management for gitlab ci
 After=network.target
 
 [Service]
-ExecStart=/gitlab_ci_scripts/venv/bin/python3 /gitlab_ci_scripts/dckr/remove_unused_docker_images.py --config /gitlab_ci_scripts/config.json
+ExecStart=/gitlab_ci_scripts/venv/bin/python3 /gitlab_ci_scripts/remove_unused_docker_images.py --config /gitlab_ci_scripts/config.json
 WorkingDirectory=/gitlab_ci_scripts
 User=root
 Restart=always
